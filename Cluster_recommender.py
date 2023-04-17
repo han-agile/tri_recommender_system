@@ -648,7 +648,7 @@ def execute(self):
     df_for_cluster = pd.DataFrame(df_for_cluster,columns=BASE2.columns)
     df_for_cluster = df_for_cluster.drop('고객번호',axis=1)
     
-    #n_cluster를 silhouette_score에 따라서 변화하게 만드는 코드 짜기
+    #n_cluster를 silhouette_score에 따라서 변화하게 만드는 코드 추가필
     clusterN = 5
     km = KMeans(n_clusters=clusterN, n_jobs=5, random_state=777, max_iter=10000, tol=1e-04, init='k-means++')
     km.fit(df_for_cluster)
